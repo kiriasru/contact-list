@@ -3,3 +3,6 @@ const listaDeContactos = ["Sofia Lopez", "Bruno Romero", "Yury Garcia", "Marissa
 function agregarContacto(nuevoContacto) {
     listaDeContactos.push(nuevoContacto);
 }
+
+agregarContacto("Shady Binaeli");
+
