@@ -15,3 +15,12 @@ function quitarContacto(removerContacto) {
 
 quitarContacto("Bruno Romero");
 
+function imprimirContactos() {
+    for (let i = 0; i < listaDeContactos.length; i++) {
+        console.log(listaDeContactos[i]);
+    }
+}
+
+imprimirContactos();
+
+
