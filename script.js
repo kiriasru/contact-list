@@ -6,3 +6,12 @@ function agregarContacto(nuevoContacto) {
 
 agregarContacto("Shady Binaeli");
 
+function quitarContacto(removerContacto) {
+    const posicion = listaDeContactos.indexOf(removerContacto);
+    if (posicion !== -1) {
+        listaDeContactos.splice(posicion, 1);
+    } 
+}
+
+quitarContacto("Bruno Romero");
+
