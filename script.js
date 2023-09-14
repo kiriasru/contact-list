@@ -22,12 +22,23 @@ const contacto2 = {
 
 const contacto3 = {
   id: 3,
-  nombres: 'Daniela Raquel',
-  apellidos: 'Gogel Aguilar',
-  telefono: '33104870',
+  nombres: 'Leo Alejandro',
+  apellidos: 'Irias Ruiz',
+  telefono: '95403981',
   ubicaciones: {
     ciudad: 'Tegucigala',
-    direccion: 'Residencial La Cañada'
+    direccion: 'Residencial Portal del Bosque'
+  },
+};
+
+const contacto4 = {
+  id: 4,
+  nombres: 'Roslyn Vanessa',
+  apellidos: 'Ruiz Coello',
+  telefono: '98192098',
+  ubicaciones: {
+    ciudad: 'Tegucigala',
+    direccion: 'Residencial Portal del Bosque'
   },
 };
 
