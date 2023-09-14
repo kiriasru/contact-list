@@ -91,3 +91,4 @@ if (eliminado) {
 } else {
   console.log(`No se encontró el contacto con ID ${idAEliminar}`);
 }
+
