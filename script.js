@@ -59,10 +59,11 @@ function agregarContacto(nombres, apellidos, telefono, ciudad, direccion) {
 const contacto5 = agregarContacto(
   'Luna Daniela',
   'Vaquedano Solano',
-  '33895087',
-  'Tegucigalpa',
-  'Ciudad Nueva'
+  '33875098',
+  'ciudad',
+  'direccion'
 );
+
 
 function eliminarContacto(contacto) {
   const index = listaDeContactos.indexOf(contacto);
@@ -90,5 +91,3 @@ if (eliminado) {
 } else {
   console.log(`No se encontró el contacto con ID ${idAEliminar}`);
 }
-
-
