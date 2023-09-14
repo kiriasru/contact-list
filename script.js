@@ -41,35 +41,54 @@ const listaDeContactos = [
   },
 ];
 
-
-function crearContacto(id, nombres, apellidos, telefono, ciudad, direccion) {
-  const nuevoContacto = Object.create(contacto);
-  nuevoContacto.id = id;
-  nuevoContacto.nombres = nombres;
-  nuevoContacto.apellidos = apellidos;
-  nuevoContacto.telefono = telefono;
-  nuevoContacto.ubicaciones.ciudad = ciudad;
-  nuevoContacto.ubicaciones.direccion = direccion;
-
+function agregarContacto(nombres, apellidos, telefono, ciudad, direccion) {
+  const nuevoContacto = {
+    id: listaDeContactos.length + 1,
+    nombres,
+    apellidos,
+    telefono,
+    ubicaciones: {
+      ciudad,
+      direccion,
+    },
+  };
+  listaDeContactos.push(nuevoContacto);
   return nuevoContacto;
 }
 
-
-const contacto5 = crearContacto(
-  5,
+const contacto5 = agregarContacto(
   'Luna Daniela',
   'Vaquedano Solano',
-  '33809833',
+  '33895087',
   'Tegucigalpa',
-  'Villa Nueva'
+  'Ciudad Nueva'
 );
 
-
-// Función para eliminar un contacto
 function eliminarContacto(contacto) {
   const index = listaDeContactos.indexOf(contacto);
   if (index !== -1) {
-    listaDeContactos.splice(index, 1); // Elimina el contacto de la lista
+    listaDeContactos.splice(index, 1); 
   }
 }
+
+function eliminarContacto(id) {
+  const indice = listaDeContactos.findIndex((contacto) => contacto.id === id);
+
+  if (indice !== -1) {
+    listaDeContactos.splice(indice, 1);
+    return true;
+  } else {
+    return false;
+  }
+}
+
+const idAEliminar = 3;
+const eliminado = eliminarContacto(idAEliminar);
+
+if (eliminado) {
+  console.log(`Se eliminó el contacto con ID ${idAEliminar}`);
+} else {
+  console.log(`No se encontró el contacto con ID ${idAEliminar}`);
+}
+
 
