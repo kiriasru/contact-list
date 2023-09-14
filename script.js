@@ -60,8 +60,8 @@ const contacto5 = agregarContacto(
   'Luna Daniela',
   'Vaquedano Solano',
   '33875098',
-  'ciudad',
-  'direccion'
+  'Tegucigalpa',
+  'Ciudad Nueva'
 );
 
 
