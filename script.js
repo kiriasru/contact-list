@@ -92,3 +92,33 @@ if (eliminado) {
   console.log(`No se encontró el contacto con ID ${idAEliminar}`);
 }
 
+
+
+function actualizarContacto(id, nuevosDatos) {
+  const contactoExistente = listaDeContactos.find((contacto) => contacto.id === id);
+
+  if (contactoExistente) {
+    Object.assign(contactoExistente, nuevosDatos);
+    return true;
+  } else {
+    return false;
+  }
+}
+
+const idAActualizar = 1;
+const nuevosDatos = {
+  telefono: '98715432',
+  ubicaciones: {
+    ciudad: 'Tegucigalpa',
+    direccion: 'Las Casitas',
+  },
+};
+
+const actualizado = actualizarContacto(idAActualizar, nuevosDatos);
+
+if (actualizado) {
+  console.log(`Se actualizó el contacto con ID ${idAActualizar}`);
+} else {
+  console.log(`No se encontró el contacto con ID ${idAActualizar}`);
+}
+
